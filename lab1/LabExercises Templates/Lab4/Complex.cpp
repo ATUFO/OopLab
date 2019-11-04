@@ -5,12 +5,12 @@ using namespace std;
 
 #include "Complex.h"
 
-Complex::Complex(double real, double imaginary)
+Complex::Complex(double real, double imaginary) // construct
 {
    setComplexNumber(real, imaginary);
 }
 
-Complex::Complex()
+Complex::Complex() // provide a  consturctor
 {
 }
 
@@ -22,10 +22,9 @@ Complex Complex::add(const Complex &right)
       the realPart of right to the realPart of this Complex
       object and add the imaginaryPart of right to the
       imaginaryPart of this Complex object */
-   Complex c;
-   c.realPart = realPart + right.realPart;
-   c.imaginaryPart = imaginaryPart + right.imaginaryPart;
-   return c;
+   realPart += right.realPart;
+   imaginaryPart += right.imaginaryPart;
+   return (*this);
 } // end function add
 
 Complex Complex::subtract(const Complex &right)
@@ -34,10 +33,9 @@ Complex Complex::subtract(const Complex &right)
       the realPart of right from the realPart of this Complex
       object and subtract the imaginaryPart of right from
       the imaginaryPart of this Complex object */
-   Complex c;
-   c.realPart = realPart - right.realPart;
-   c.imaginaryPart = imaginaryPart - right.imaginaryPart;
-   return c;
+   realPart -= right.realPart;
+   imaginaryPart -= right.imaginaryPart;
+   return (*this);
 } // end function subtract
 
 void Complex::printComplex()

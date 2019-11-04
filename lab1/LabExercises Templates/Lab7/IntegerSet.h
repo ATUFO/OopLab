@@ -6,34 +6,28 @@
 class IntegerSet
 {
 public:
-   // default constructor
-   IntegerSet()
+   IntegerSet() //default constructor
    {
-      /* Write call to emptySet */
       emptySet();
-   } // end IntegerSet constructor
+   }
 
-   IntegerSet(int[], int); // constructor that takes an initial set
-   IntegerSet unionOfSets(const IntegerSet &);
-   /* Write a member funcion prototype for intersectionOfSets */
+   IntegerSet(int[], int);                     // constructor that takes an initial set
+   IntegerSet unionOfSets(const IntegerSet &); // union
    IntegerSet intersectionOfSets(const IntegerSet &);
-   void emptySet(); // set all elements of set to 0
-   void inputSet(); // read values from user
-   void insertElement(int);
-   /* Write a member function prototype for deleteElement */
-   void deleteElement(int);
-   void printSet() const;
-   /* Write a member function prototype for isEqualTo */
-   bool isEqualTo(const IntegerSet &r) const;
+   void emptySet();                           // set all elements of set to 0
+   void inputSet();                           // read values from user
+   void insertElement(int);                   // define a member funtion to add an element to set
+   void deleteElement(int);                   // define a member funtion to delete an element of set
+   void printSet() const;                     // define a member funtion to show all element
+   bool isEqualTo(const IntegerSet &r) const; // a member funtion to check Equally
 
 private:
    int set[101]; // range of 0 - 100
 
-   // determines a valid entry to the set
-   int validEntry(int x) const
+   int validEntry(int x) const // a util funtion to valid the element which will be add to set
    {
       return (x >= 0 && x <= 100);
-   } // end function validEntry
-};   // end class IntegerSet
+   }
+};
 
 #endif

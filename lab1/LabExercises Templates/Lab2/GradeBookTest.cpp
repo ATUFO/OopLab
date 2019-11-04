@@ -15,9 +15,10 @@ int main()
    // display welcome message and instructor's name
    gradeBook.displayMessage();
 
-   gradeBook.setInstructorName("Judy Jones");
-
-   gradeBook.displayMessage();
-
    /* write code to change instructor's name and output changes */
+ // use the set function to change the instructor's name of gradeBook
+   gradeBook.setInstructorName("Judy Jones"); 
+
+   gradeBook.displayMessage(); // display message
+
 } // end main

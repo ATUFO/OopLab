@@ -9,17 +9,14 @@ using namespace std;
    member. Write code that validates the value of salary to ensure that it is
    not negative. */
 Employee::Employee(string fstName, string lstName, int sal) : firstName(fstName),
-                                                                    lastName(lstName)
+                                                              lastName(lstName)
 {
-    if (sal < 0)
-        salary = 0;
-    else
-        salary = sal;
+    setSalary(sal); // use set funtion to store salary
 }
 /* Define a set function for the first name data member. */
 void Employee::setFirstName(string name)
 {
-    firstName = name;
+    firstName = name; //store firstName
 }
 /* Define a get function for the first name data member. */
 string Employee::getFirstName()
@@ -29,7 +26,7 @@ string Employee::getFirstName()
 /* Define a set function for the last name data member. */
 void Employee::setLastName(string name)
 {
-    lastName = name;
+    lastName = name; // store lastName
 }
 /* Define a get function for the last name data member. */
 string Employee::getLastName()
@@ -41,11 +38,15 @@ string Employee::getLastName()
 void Employee::setSalary(int amount)
 {
     if (amount < 0)
-        salary = 0;
+    {
+        cout << "Salary must greater than 0"; // display a error message
+        salary = 0;                           // and set salary to zero
+    }
     else
         salary = amount;
 }
 /* Define a get function for the monthly salary data member. */
-int Employee::getSalary(){
+int Employee::getSalary()
+{
     return salary;
 }

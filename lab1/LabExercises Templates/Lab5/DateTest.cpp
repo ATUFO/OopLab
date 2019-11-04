@@ -12,9 +12,9 @@ int main()
    // output Date object d's value
    for ( int loop = 1; loop <= MAXDAYS; ++loop ) 
    {
+      /* Write call to nextDay */
       d.print(); // invokes function print
       d.nextDay();
-      /* Write call to nextDay */
    } // end for
 
    cout << endl;

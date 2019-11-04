@@ -18,25 +18,22 @@ IntegerSet::IntegerSet(int array[], int size)
 /* Write a definition for emptySet */
 void IntegerSet::emptySet()
 {
-   for (int i = 0; i < 101; i++)
+   for (int i = 0; i < 101; i++) // use an for loop to set each element to zero
       set[i] = 0;
 }
 // input a set from the user
 void IntegerSet::inputSet()
 {
    int number;
-
    do
    {
       cout << "Enter an element (-1 to end): ";
       cin >> number;
-
       if (validEntry(number))
          set[number] = 1;
       else if (number != -1)
          cerr << "Invalid Element\n";
    } while (number != -1); // end do...while
-
    cout << "Entry complete\n";
 } // end function inputSet
 
@@ -71,8 +68,8 @@ IntegerSet IntegerSet::unionOfSets(const IntegerSet &r)
 
    // if element is in either set, add to temporary set
    for (int n = 0; n < 101; n++)
-      if (set[n] == 1 || r.set[n] == 1)
-         temp.set[n] = 1;
+      if (set[n] == 1 || r.set[n] == 1) 
+         temp.set[n] = 1;               
 
    return temp;
 } // end function unionOfSets
@@ -83,24 +80,24 @@ IntegerSet IntegerSet::intersectionOfSets(const IntegerSet &r)
    IntegerSet temp;
    for (int i = 0; i < 101; i++)
 
-      if (set[i] && r.set[i])
-         temp.set[i] = 1;
+      if (set[i] && r.set[i]) // if an two sets both have common element,
+         temp.set[i] = 1;     //the element will be insert into temp
    return temp;
 }
 
 // insert a new integer into this set
 void IntegerSet::insertElement(int k)
 {
-   if (validEntry(k))
+   if (validEntry(k)) // if 'k' is valid it will be insert to this set
       set[k] = 1;
    else
-      cerr << "Invalid insert attempted!\n";
+      cerr << "Invalid insert attempted!\n"; // print a error message
 } // end function insertElement
 
 /* Write definition for deleteElement */
 void IntegerSet::deleteElement(int k)
 {
-   if (validEntry(k))
+   if (validEntry(k)) // if 'k' is valid it will be deleter from this set
       set[k] = 0;
    else
       cerr << "Invalid insert attempted!\n";

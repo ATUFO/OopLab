@@ -7,14 +7,13 @@ using namespace std;
 class GradeBook
 {
 public:
-   // constructor initializes course name and instructor name
-   GradeBook( string, string );
+   GradeBook( string, string );   // constructor initializes course name and instructor name
    void setCourseName( string ); // function to set the course name
    string getCourseName(); // function to retrieve the course name
    /* write code to declare a get function for the instructor's name */
    string getInstructorName();
    /* write code to declare a set function for the instructor's name */
-   void setInstructorName(string);
+   void setInstructorName(string); // function to set the instructor's name
    void displayMessage(); // display welcome message and instructor name
 private:
    string courseName; // course name for this GradeBook

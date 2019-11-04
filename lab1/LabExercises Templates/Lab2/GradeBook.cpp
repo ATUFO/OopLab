@@ -27,12 +27,13 @@ string GradeBook::getCourseName()
 } // end function getCourseName
 
 /* write code to define a get member function for the instructor's name */
-string GradeBook::getInstructorName(){
-   return instructorName;
+string GradeBook::getInstructorName()
+{
+   return instructorName; 
 }
 /* write code to define a set member function for the instructor's name */
 void GradeBook::setInstructorName(string name){
-   instructorName=name;
+   instructorName=name; //store the instructor name
 }
 
 // display a welcome message and the instructor's name

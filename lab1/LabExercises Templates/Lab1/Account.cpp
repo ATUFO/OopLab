@@ -9,7 +9,6 @@ using namespace std;
 Account::Account(int initialBalance)
 {
    balance = 0; // assume that the balance begins at 0
-
    // if initialBalance is greater than 0, set this value as the
    // balance of the Account; otherwise, balance remains 0
    if (initialBalance > 0)
@@ -30,15 +29,13 @@ void Account::credit(int amount)
 /* write code to define member function debit. */
 void Account::debit(int amount)
 {
-   if (amount > balance)
+   if (amount > balance) // print error message if greater than balance
    {
       cout << "Debit amount exceeded account balance.\n\n";
       return;
    }
    else
-   {
-      balance -= amount;
-   }
+      balance -= amount; // minuns amount to balance
 }
 
 // return the account balance

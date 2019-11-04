@@ -60,16 +60,16 @@ void Date::print()
    a new month or a new year */
 void Date::nextDay()
 {
-   day++;
-   if (day > monthDays())
+   day++;  // fisrt add day
+   if (day > monthDays()) // if day out of range 
    {
-      day = 1;
-      month++;
+      day = 1; // set day to 1
+      month++; // add month
    }
-   if (month > 12)
-   {
-      month = 1;
-      year++;
+   if (month > 12) // if month out of range
+   { 
+      month = 1; // set month 1
+      year++; // add year
    }
 }
 

@@ -5,7 +5,7 @@
 /* Write definition for add member function */
 double SimpleCalculator::add(double a, double b) const
 {
-   return a + b;
+   return a + b; 
 }
 
 // function subtract definition
